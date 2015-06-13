@@ -1,0 +1,22 @@
+table {
+
+}
+
+td {
+  width: 30px;
+  height: 30px;
+}
+
+.border {
+  background-color: blue;
+}
+
+.eater {
+  background-color: red;
+}
+
+.asterisk {
+  background-image: url('asterisk.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

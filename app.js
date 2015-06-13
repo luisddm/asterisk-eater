@@ -30,14 +30,11 @@ angular.module('asteriskApp').controller('AsteriskController', ['$scope', '$docu
     }
   }
 
-
   for (var k = 0; k < 10; k++) {
     var rndX = Math.floor(Math.random() * (size-2)) + 1;
     var rndY = Math.floor(Math.random() * (size-2)) + 1;
     $scope.board[rndX][rndY] = '*';
   }
-
-
 
   $scope.pos = {
     'x': 1,
@@ -46,14 +43,14 @@ angular.module('asteriskApp').controller('AsteriskController', ['$scope', '$docu
 
   $scope.board[$scope.pos.x][$scope.pos.y] = '0';
 
-  $document.bind("keypress", function (event) {
+  $document.bind('keypress', function (event) {
 
     $scope.$apply(function () {
 
       var x = $scope.pos.x;
       var y = $scope.pos.y;
 
-      if (event.key === "ArrowDown") {
+      if (event.key === 'ArrowDown') {
 
         if ($scope.board[x + 1][y] != '#') {
           $scope.board[x + 1][y] = '0';
@@ -61,7 +58,7 @@ angular.module('asteriskApp').controller('AsteriskController', ['$scope', '$docu
           $scope.pos.x++;
         }
 
-      } else if (event.key === "ArrowUp") {
+      } else if (event.key === 'ArrowUp') {
 
         if ($scope.board[x - 1][y] != '#') {
           $scope.board[x - 1][y] = '0';
@@ -69,7 +66,7 @@ angular.module('asteriskApp').controller('AsteriskController', ['$scope', '$docu
           $scope.pos.x--;
         }
 
-      } else if (event.key === "ArrowRight") {
+      } else if (event.key === 'ArrowRight') {
 
         if ($scope.board[x][y + 1] != '#') {
           $scope.board[x][y + 1] = '0';
@@ -77,7 +74,7 @@ angular.module('asteriskApp').controller('AsteriskController', ['$scope', '$docu
           $scope.pos.y++;
         }
 
-      } else if (event.key === "ArrowLeft") {
+      } else if (event.key === 'ArrowLeft') {
 
         if ($scope.board[x][y - 1] != '#') {
           $scope.board[x][y - 1] = '0';

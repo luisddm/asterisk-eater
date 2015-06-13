@@ -1,4 +1,6 @@
 table {
+  border-collapse: collapse;
+  background-color: #ddd;
 
 }
 
@@ -8,11 +10,12 @@ td {
 }
 
 .border {
-  background-color: blue;
+  background-color: #567;
 }
 
 .eater {
   background-color: red;
+  border-radius: 50%;
 }
 
 .asterisk {

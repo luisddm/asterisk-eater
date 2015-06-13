@@ -9,15 +9,17 @@
 </head>
 <body>
   <div ng-app="asteriskApp">
-  <div ng-controller="AsteriskController">
-  <table ng-keypress="callFunction($event)">
-    <tr ng-repeat="row in board track by $index">
-      <td class="{{cell | cellFilter}}" ng-repeat="cell in row track by $index">
+    <div ng-controller="AsteriskController">
+      <h1>Asterisk Eater</h1>
+      <p>Use the <strong>arrow keys</strong> to move the red ball and eat all the asterisks.</p>
+      <table ng-keypress="callFunction($event)">
+        <tr ng-repeat="row in board track by $index">
+          <td class="{{cell | cellFilter}}" ng-repeat="cell in row track by $index">
 
-      </td>
-    </tr>
-  </table>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
-</div>
 </body>
 </html>

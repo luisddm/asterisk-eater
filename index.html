@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>Asterisk Eater</title>
-  <script src="angular.min.js"></script>
-  <script src="app.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="lib/angular.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-  <div ng-app="asteriskApp">
-    <div ng-controller="AsteriskController">
+  <div ng-app="asteriskApp" ng-keyup="keyup($event)">
+    <div ng-controller="AsteriskController as asteriskController">
       <h1>Asterisk Eater</h1>
-      <p>Use the <strong>arrow keys</strong> to move the red ball and eat all the asterisks.</p>
+      <p>Use the
+        <strong>arrow keys</strong> to move the red ball and eat all the asterisks.</p>
+      <p>POSITION X: {{ asteriskController.pos.x }}, Y: {{ asteriskController.pos.y }}</p>
       <table ng-keypress="callFunction($event)">
-        <tr ng-repeat="row in board track by $index">
-          <td class="{{cell | cellFilter}}" ng-repeat="cell in row track by $index">
+        <tr ng-repeat="row in asteriskController.board track by $index">
+          <td class="{{ cell | cellFilter }}" ng-repeat="cell in row track by $index">
 
           </td>
         </tr>
       </table>
     </div>
   </div>
+  <script src="app.js"></script>
 </body>
+
 </html>

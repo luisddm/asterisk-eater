@@ -19,7 +19,7 @@ td {
 }
 
 .asterisk {
-  background-image: url('asterisk.svg');
+  background-image: url('../img/asterisk.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

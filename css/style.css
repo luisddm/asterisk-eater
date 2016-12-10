@@ -1,7 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
 table {
   border-collapse: collapse;
   background-color: #ddd;
-
 }
 
 td {
@@ -9,12 +12,22 @@ td {
   height: 30px;
 }
 
+h1 {
+  text-transform: uppercase;
+  color: #cc4444;
+}
+
+.coordinates {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .border {
   background-color: #567;
 }
 
 .eater {
-  background-color: red;
+  background-color: #cc4444;
   border-radius: 50%;
 }
 
@@ -22,4 +35,15 @@ td {
   background-image: url('../img/asterisk.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+footer {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.angular-logo {
+  width: 100px;
+  margin-left: 10px;
 }

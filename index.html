@@ -12,9 +12,12 @@
   <div ng-app="asteriskApp" ng-keyup="keyup($event)">
     <div ng-controller="AsteriskController as asteriskController">
       <h1>Asterisk Eater</h1>
+      <h3>
+        DISCLAIMER: This game has no point at all. However I'm proud of having programmed one of the most useless pieces of software ever.
+      </h3>
       <p>Use the
-        <strong>arrow keys</strong> to move the red ball and eat all the asterisks.</p>
-      <p>POSITION X: {{ asteriskController.pos.x }}, Y: {{ asteriskController.pos.y }}</p>
+        <strong>arrow keys</strong> to move the red ball around the board and eat all the asterisks.</p>
+      <p class="coordinates">( {{ asteriskController.pos.x }}, {{ asteriskController.pos.y }} )</p>
       <table ng-keypress="callFunction($event)">
         <tr ng-repeat="row in asteriskController.board track by $index">
           <td class="{{ cell | cellFilter }}" ng-repeat="cell in row track by $index">
@@ -26,5 +29,9 @@
   </div>
   <script src="app.js"></script>
 </body>
+
+<footer>
+  Powered by <img class="angular-logo" src="https://angularjs.org/img/AngularJS-large.png" />
+</footer>
 
 </html>
